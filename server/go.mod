@@ -1,4 +1,4 @@
-module github.com/consensusnetworks/server
+module github.com/consensusnetworks/fhir-kit/server
 
 go 1.17
 
