@@ -4,6 +4,7 @@ name = fhir-server
 build_dir = bin
 os = $(shell go env GOOS)
 arch = $(shell go env GOARCH)
+port = 9090
 image_version = v1.0.0
 image_tag = $(name)-image:$(image_version)
 container = $(name)-container

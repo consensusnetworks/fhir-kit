@@ -1,10 +1,10 @@
 # FHIR Kit
 
- > Simple-to-spin-up FHIR development kit.
+> Simple to spin-up FHIR development kit.
 
 ## Setup
 
-1. Clone repo
+1. Clone the repo
 
 ```bash
 git clone https://github.com/consensusnetworks/fhir-kit
@@ -16,7 +16,7 @@ git clone https://github.com/consensusnetworks/fhir-kit
 make start
 ```
 
-To stop the server either press `Ctrl+C` or run `make stop` 
+To stop the server either press `Ctrl+C` or run `make stop` in a separate terminal.
 
 3. Make sure the FHIR server is running
 

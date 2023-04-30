@@ -49,15 +49,10 @@ func (server *FServer) RegisterMiddlewares() error {
 	return nil
 }
 
-// I need two middelware one that needs to run before the reuqest reaches the handler and one that needs to run after the handler
-// the one befire checks the request header for the content type and if it is application/json it will continue to the handler otherwise it will return an error
-// if correct then it will forward the request to the handler when the handler is done it will pass
 func ClientContentTypePrefer(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if r.Header.Get("Prefer") != "return=representation" {
-			w.WriteHeader(http.StatusPreconditionFailed)
-			w.Write([]byte("Prefer header must be set to return=representation"))
-			return
+			// TODO: set the context based on the Accept header
 		}
 		next.ServeHTTP(w, r)
 	})
