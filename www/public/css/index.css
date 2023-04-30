@@ -1,0 +1,98 @@
+
+:root {
+    --white: #F1F1F1;
+    --black: #100F0F;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: 'Overpass', sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.main {
+    margin: 0 auto;
+    max-height: 100vh;
+    /*padding: 3rem 1.5rem;*/
+}
+
+.main > h1 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.main > p  {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.primary-btn {
+    background-color: #0095ff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+.primary-btn:hover,
+.primary-btn:focus {
+    background-color: #07c;
+}
+
+.primary-btn:focus {
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.primary-btn:active {
+    background-color: #0064bd;
+    box-shadow: none;
+}
+
+.hero__card {
+    height: 580px;
+    background-color: rgba(0,0,0,0.08);
+    border-radius: 5px;
+    /*padding: 1rem;*/
+    transition: .2s background-color ease;
+    cursor: pointer;
+}
+
+.hero__card > img {
+    /*width: 820px;*/
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@media all and (min-width: 980px) {
+    .main {
+        max-width: 980px;
+        padding: 3rem 0;
+    }
+}

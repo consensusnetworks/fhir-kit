@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{{ .Title }}</title>
+    <link href="public/css/dashboard.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <div class="topbar">
+            <ul>
+                <li><a href="/dashboard/insight">Insight</a></li>
+                <li><a href="/dashboard/project">Projects</a></li>
+                <li><a href="/dashboard/explorer">Query Explorer</a></li>
+            </ul>
+            <div class="rightside_wrapper">
+                <div class="icons">
+                    <img src="public/media/menu-add.svg" alt="add" />
+                    <img src="public/media/bell.svg" alt="notifications" />
+                    <img src="public/media/docs.svg" alt="docs" />
+                </div>
+                <div class="account">
+                    <div class="avatar"></div>
+                    <img src="public/media/arrow-down.svg" alt="arrow-down" />
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Overview</h1>
+            <div class="stats">
+                <div class="stats_wrapper">
+                    {{ range $i := .Overview }}
+                    <div class="card">
+                        <div class="card_header">
+                            <h1>Patients</h1>
+                        </div>
+                        <span>{{ $i }}</span>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

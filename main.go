@@ -1,7 +1,15 @@
 package main
 
-import "github.com/consensusnetworks/fhir-kit/server"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-	server.Run()
+	err := Run()
+
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
 }
