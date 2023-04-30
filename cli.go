@@ -30,26 +30,15 @@ func Run() error {
 			Usage: "verbose output",
 			Value: false,
 		},
-		&cli.BoolFlag{
-			Name:  "inContainer",
-			Usage: "running in a container",
-			Value: false,
-		},
 	}
 
 	app.Action = func(c *cli.Context) error {
 		var err error
-		// err := godotenv.Load()
-
-		// if err != nil {
-		// 	return err
-		// }
 
 		config := Config{
-			Port:        os.Getenv("PORT"),
-			Verbose:     c.Bool("verbose"),
-			InContainer: c.Bool("inContainer"),
-			CGOEnabled:  os.Getenv("CGO_ENABLED") == "false",
+			Port:       os.Getenv("PORT"),
+			Verbose:    c.Bool("verbose"),
+			CGOEnabled: os.Getenv("CGO_ENABLED") == "false",
 		}
 
 		if config.Port == "" {
